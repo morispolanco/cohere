@@ -26,9 +26,9 @@ def main():
             documents=[]
         )
 
-        # Mostrar la respuesta completa
+        # Convertir la respuesta a cadena antes de mostrarla
         st.text("Respuesta completa de Cohere:")
-        st.write(respuesta)
+        st.write(str(respuesta))
 
         # Mostrar las respuestas sugeridas al usuario
         if "suggestedUserResponses" in respuesta:
