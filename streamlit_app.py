@@ -1,5 +1,5 @@
 import streamlit as st
-import cohere
+import cohere 
 
 co = cohere.Client('KDhsUSaH5D01hlEWHEOfZvNhowIGPZC2cUcCP1sO')
 
