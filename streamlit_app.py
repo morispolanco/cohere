@@ -1,7 +1,11 @@
 import streamlit as st
-import cohere 
+import cohere
+import json
 
-co = cohere.Client('KDhsUSaH5D01hlEWHEOfZvNhowIGPZC2cUcCP1sO')
+# Ingresa tu API key de Cohere aquí
+API_KEY = KDhsUSaH5D01hlEWHEOfZvNhowIGPZC2cUcCP1sO
+
+co = cohere.Client(API_KEY)
 
 st.title("Leyes de Guatemala")
 
@@ -19,9 +23,13 @@ if st.button("Responder"):
     prompt_truncation='AUTO',
     stream=True,
     citation_quality='accurate',
-    connectors=[{"id":"web-search"}], 
+    connectors=[{"id":"web-search"}],
     documents=[]
   )
 
   st.write("Respuesta:")
-  st.write(response)
+
+  # Convertimos la respuesta a JSON para mostrar
+  response_json = json.dumps(response)  
+
+  st.write(response_json)
