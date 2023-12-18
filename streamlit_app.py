@@ -26,9 +26,14 @@ def main():
             documents=[]
         )
 
-        # Mostrar la respuesta
-        st.text("Respuesta de Cohere:")
-        st.write(respuesta["message"]["content"])
+        # Mostrar la respuesta completa
+        st.text("Respuesta completa de Cohere:")
+        st.write(respuesta)
+
+        # Mostrar las respuestas sugeridas al usuario
+        if "suggestedUserResponses" in respuesta:
+            st.text("Respuestas sugeridas:")
+            st.write(respuesta["suggestedUserResponses"])
 
 if __name__ == "__main__":
     main()
