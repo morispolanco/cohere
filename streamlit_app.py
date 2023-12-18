@@ -3,7 +3,7 @@ import cohere
 import json
 
 # Ingresa tu API key de Cohere aquí
-API_KEY = KDhsUSaH5D01hlEWHEOfZvNhowIGPZC2cUcCP1sO
+API_KEY = 'KDhsUSaH5D01hlEWHEOfZvNhowIGPZC2cUcCP1sO'
 
 co = cohere.Client(API_KEY)
 
